@@ -17,10 +17,10 @@ export default function Presentation() {
         left: 0,
         width: "100%",
         height: "calc(100% - 104px)",
-        backgroundColor: "#000",
+        backgroundImage: "url(/main-min.jpg)",
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "right", padding: "10px" }}>
+      <Box sx={{ display: "flex", justifyContent: "right", padding: "10px", backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
         <IconButton onClick={() => changeLanguage("es")}>
           {getUnicodeFlagIcon("ES")}
         </IconButton>
@@ -37,6 +37,9 @@ export default function Presentation() {
           textAlign: "justify",
           scrollbarWidth: "thin",
           scrollbarColor: "#30316A white",
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          textShadow: "2px 2px 4px #000000",
+          
         }}
       >
         <Box
@@ -50,6 +53,8 @@ export default function Presentation() {
               textTransform: "uppercase",
               fontWeight: "bold",
               fontSize: "1em",
+              //break line when \n is found
+              whiteSpace: "pre-line",
             }}
           >
             {t("presentation.title")}
@@ -104,7 +109,10 @@ export default function Presentation() {
             {t("presentation.text10")}
           </Typography>
           <br />
-          <Typography variant="body2" sx={{ color: "white", textAlign: "right" }}>
+          <Typography
+            variant="body2"
+            sx={{ color: "white", textAlign: "right" }}
+          >
             {t("presentation.signature")}
           </Typography>
         </Box>

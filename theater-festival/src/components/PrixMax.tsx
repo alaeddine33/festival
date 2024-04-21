@@ -17,7 +17,10 @@ export default function PrixMax() {
         left: 0,
         width: "100%",
         height: "calc(100% - 104px)",
-        backgroundColor: "#000",
+        backgroundImage: "url(/premio.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "right", padding: "10px" }}>
@@ -37,11 +40,15 @@ export default function PrixMax() {
           textAlign: "justify",
           scrollbarWidth: "thin",
           scrollbarColor: "#30316A white",
+          textShadow: "2px 2px 4px #000000",
         }}
       >
         <Box
           sx={{
             padding: "10px",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            borderRadius: "10px",
+
           }}
         >
           <Typography
@@ -62,6 +69,25 @@ export default function PrixMax() {
           <Typography variant="body2" sx={{ color: "white", textAlign: "right" }}>
             {t("prix.signature")}
           </Typography>
+        </Box>
+        <Box
+          sx={{
+            padding: "10px",
+            justifyContent: "center",
+            display: "flex",
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+          }}
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/HnfCtGaFGRI?autoplay=1"
+            title=" Luis Jiménez recoge el Premio Max 2011"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            //hide border
+            style={{ border: "none"}}
+          ></iframe>
         </Box>
       </Box>
     </Box>

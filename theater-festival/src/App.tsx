@@ -8,6 +8,7 @@ import Presentation from "./components/Presentation";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import PrixMax from "./components/PrixMax";
+import Contact from "./components/Contact";
 
 const darkTheme = createTheme({
   palette: {
@@ -29,7 +30,7 @@ export default function App() {
             <Route path="/prix-max-2011" element={<PrixMax />} />
             <Route path="/chronologie" element={<Main />} />
             <Route path="/lectures-rencontres" element={<Main />} />
-            <Route path="/contact" element={<Main />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </Router>

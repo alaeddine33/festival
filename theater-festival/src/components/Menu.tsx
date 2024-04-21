@@ -21,6 +21,10 @@ const Menu: React.FC = (toggleDrawer: any) => {
     navigate(path);
   };
 
+  const openPdf = (pdf: string) => {
+    window.open(pdf, "_blank");
+  };
+
   return (
     <Box
       sx={{ width: 250, backgroundColor: "#33336F", height: "100%" }}
@@ -29,7 +33,7 @@ const Menu: React.FC = (toggleDrawer: any) => {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem disablePadding onClick={() => goTo("/concert-poetique")}>
+        <ListItem disablePadding onClick={() => openPdf("/pdf/concert-poetique.pdf")}>
           <ListItemButton>
             <ListItemIcon>
               <MicIcon />
@@ -54,7 +58,7 @@ const Menu: React.FC = (toggleDrawer: any) => {
             <ListItemText primary="Prix Max 2011" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={() => openPdf("/pdf/chronologie.pdf")}>
           <ListItemButton>
             <ListItemIcon>
               <CalendarMonthIcon />
@@ -62,7 +66,7 @@ const Menu: React.FC = (toggleDrawer: any) => {
             <ListItemText primary="Chronologie de la programmation" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={() => openPdf("/pdf/lectures-rencontres.pdf")}>
           <ListItemButton>
             <ListItemIcon>
               <MenuBookIcon />
@@ -70,7 +74,7 @@ const Menu: React.FC = (toggleDrawer: any) => {
             <ListItemText primary="Lectures et rencontres" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={() => goTo("/contact")}>
           <ListItemButton>
             <ListItemIcon>
               <EmailIcon />
