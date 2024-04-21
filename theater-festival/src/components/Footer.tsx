@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         bottom: 0,
         left: 0,
         width: '100%',
-        backgroundColor: '#EBB240',
+        backgroundColor: '#30316A',
         color: '#fff',
         p: 2,
         textAlign: 'center',
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         justifyContent: 'center',
       }}
     >
-      <Typography variant="body2" sx={{color:"black"}}>© {new Date().getFullYear()} Festival Don Quijote de Paris</Typography>
+      <Typography variant="body2" sx={{color:"white"}}>© {new Date().getFullYear()} Festival Don Quijote de Paris</Typography>
     </Box>
   );
 };

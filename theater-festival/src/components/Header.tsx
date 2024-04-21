@@ -1,9 +1,14 @@
 // src/components/Header.tsx
 import React from "react";
-import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography, hexToRgb } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import {
+  AppBar,
+  Drawer,
+  IconButton,
+  Toolbar,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import Menu from "./Menu";
+
 
 const Header: React.FC = () => {
   const image = "./festival-don-quijote-logo-final.png";
@@ -14,42 +19,12 @@ const Header: React.FC = () => {
     setOpen(newOpen);
   };
 
-  const DrawerList = (
-    <Box sx={{ width: 250, backgroundColor:"#EBB240", height:"100%" }} role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-  
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ height: "30px" }}>
       <Toolbar
         sx={{
           display: "flex",
-          backgroundColor: "#EBB240",
+          backgroundColor: "#30316A",
         }}
         disableGutters
       >
@@ -58,14 +33,27 @@ const Header: React.FC = () => {
           color="inherit"
           aria-label="menu"
           onClick={toggleDrawer(true)}
-          sx={{alignItems: "center", ml: 1, color: "black"}}
+          sx={{ alignItems: "center", ml: 1, color: "white" }}
         >
           <MenuIcon />
         </IconButton>
         <Drawer open={open} onClose={toggleDrawer(false)}>
-        {DrawerList}
-      </Drawer>
-        <img src={image} alt="logo" style={{ width: "10%", height: "10%", marginLeft: "auto", marginRight: "auto" }} />
+          {Menu(toggleDrawer)}
+        </Drawer>
+        <img
+          src={image}
+          alt="logo"
+          style={{
+            //make logo responsive to screen size
+            width: "auto",
+            height: "auto",
+            maxWidth: "100%",
+            maxHeight: "100%",
+            marginLeft: "auto",
+            marginRight: "auto",
+            filter: "invert(1) grayscale(1) brightness(2)"
+          }}
+        />
       </Toolbar>
     </AppBar>
   );
