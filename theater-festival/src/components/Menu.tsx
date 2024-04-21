@@ -46,7 +46,7 @@ const Menu: React.FC = (toggleDrawer: any) => {
             <ListItemText primary="Présentation" />
           </ListItemButton>
         </ListItem>
-        <ListItem disablePadding>
+        <ListItem disablePadding onClick={() => goTo("/prix-max-2011")}>
           <ListItemButton>
             <ListItemIcon>
               <EmojiEventsIcon />

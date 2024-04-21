@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // im
 import Presentation from "./components/Presentation";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
+import PrixMax from "./components/PrixMax";
 
 const darkTheme = createTheme({
   palette: {
@@ -25,7 +26,7 @@ export default function App() {
             <Route path="/" element={<Main />} />
             <Route path="/concert-poetique" element={<Main />} />
             <Route path="/presentation" element={<Presentation />} />
-            <Route path="/prix-max-2011" element={<Main />} />
+            <Route path="/prix-max-2011" element={<PrixMax />} />
             <Route path="/chronologie" element={<Main />} />
             <Route path="/lectures-rencontres" element={<Main />} />
             <Route path="/contact" element={<Main />} />

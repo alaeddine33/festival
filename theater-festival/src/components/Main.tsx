@@ -53,12 +53,17 @@ const Main: React.FC = () => {
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
                 textShadow: "2px 2px 4px #000000",
+                //make more visible on image
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                padding: "2px",
+                //border radius top only
+                borderTopLeftRadius: "10px",
+                borderTopRightRadius: "10px",
               }}
             >
               30 Année de théâtre hispanique à Paris
             </Typography>
           </Fade>
-          <br />
           <Fade in={showText} timeout={2000} style = {{transitionDelay: "0.8s"}}>
             <Typography
               variant="h3"
@@ -71,6 +76,12 @@ const Main: React.FC = () => {
                 WebkitTextStroke: "1px black",
                 WebkitTextFillColor: "white",
                 textShadow: "2px 2px 4px #000000",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                //reduce background color width
+                paddingRight: "2px",
+                //border radius bottom only
+                borderBottomLeftRadius: "10px",
+                borderBottomRightRadius: "10px",
               }}
             >
               1992-2021

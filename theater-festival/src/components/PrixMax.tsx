@@ -2,7 +2,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import getUnicodeFlagIcon from "country-flag-icons/unicode";
 
-export default function Presentation() {
+export default function PrixMax() {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
@@ -52,60 +52,15 @@ export default function Presentation() {
               fontSize: "1em",
             }}
           >
-            {t("presentation.title")}
+            {t("prix.title")}
           </Typography>
           <br />
           <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text2")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text3")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text4")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text5")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text6")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text7")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text8")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text9")}
-          </Typography>
-          <br />
-
-          <Typography variant="body1" sx={{ color: "white" }}>
-            {t("presentation.text10")}
+            {t("prix.text")}
           </Typography>
           <br />
           <Typography variant="body2" sx={{ color: "white", textAlign: "right" }}>
-            {t("presentation.signature")}
+            {t("prix.signature")}
           </Typography>
         </Box>
       </Box>
